@@ -48,7 +48,7 @@ public class TravelOffice {
         return trips.getByName(name);
     }
 
-    public Trip getTripByDestination(String destination) {
+    public List<Trip> getTripByDestination(String destination) {
         return trips.getByDestination(destination);
     }
 

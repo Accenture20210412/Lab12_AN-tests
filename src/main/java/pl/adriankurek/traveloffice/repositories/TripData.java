@@ -34,12 +34,11 @@ public class TripData implements TripRepository {
     }
 
     @Override
-    public Trip getByDestination(String destination) {
+    public List<Trip> getByDestination(String destination) {
         return trips.stream()
                 .filter(t -> t.getDestination()
                         .startsWith(destination))
-                .findFirst()
-                .get();
+                .collect(Collectors.toList());
     }
 
     @Override

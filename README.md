@@ -1,8 +1,4 @@
-# Lab01_AK
-Repozytorium dotyczy ćwiczenia 1 oraz 12.
-
-#Założenia projektowe.
-
-Źródłem danych dotyczących klientów biura oraz wycieczek mogą być dowolne klasy implementujące interfejsy CustomerRepository oraz TripRepository. W przypadku tej aplikacji implementują je klasy CustomerData oraz TripData przechowujące dane za pomocą list.
-
-Została dodana dodatkowa metoda removeCustomer(Customer customer), która pozwala na usunięcie konkretnego klienta oraz metoda getAll(), która w przypadku źródeł danych zwraca wszystkich klientów lub wszystkie wycieczki w postaci listy.
+# Lab12_AN-tests
+Testy na podstawie kodu Adriana Kurka. 
+Uwagi dla klasy TravelOfficeTest:
+- Wydzielenie w testach klasy CustomerData, po to aby sprawdzić integrację pomiędzy warstwami w drugiej z kolei metodzie, czyli shouldAddNewCustomer(). 

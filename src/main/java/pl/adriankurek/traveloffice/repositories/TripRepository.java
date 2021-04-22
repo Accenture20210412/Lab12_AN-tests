@@ -34,7 +34,7 @@ public interface TripRepository {
      * @param destination destination of the trip.
      * @return trip with a specific destination.
      */
-    Trip getByDestination(String destination);
+    List<Trip> getByDestination(String destination);
 
     /**
      * Should return list of trips that start after specific date.
