@@ -56,7 +56,6 @@ public class Main {
         System.out.println(office.getTripsInfo());
 
         System.out.println(office.getTripByDestination("Mos"));
-        System.out.println(office.removeCustomerByLastName("Harmon"));
 
         System.out.println(office.getCustomersInfo());
 

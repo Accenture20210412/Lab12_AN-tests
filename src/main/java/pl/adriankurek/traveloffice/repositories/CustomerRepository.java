@@ -33,8 +33,6 @@ public interface CustomerRepository {
     /**
      * Should remove the customer from the data source by last name or just first letters of last name.
      * @param lastName the last name of customer.
-     * @return <code>true</code> if the operation was successful;
-     *         <code>false</code> otherwise.
      */
     boolean removeByLastName(String lastName);
 

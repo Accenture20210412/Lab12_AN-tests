@@ -119,6 +119,19 @@ public class TravelOfficeTest  {
         Assert.assertEquals(2, trips.size());
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowNoSuchElementException() throws ParseException {
+        Trip trip = new Trip(
+                "Cool trip",
+                new SimpleDateFormat("dd/MM/yyyy").parse("15/04/2021"),
+                new SimpleDateFormat("dd/MM/yyyy").parse("20/04/2021"),
+                "Washington",
+                new BigDecimal("1500"));
+        Customer customer = new Customer("Michał", "Kowalski", "Wiśniowa 10", trip);
+
+        office.addCustomer(customer);
+        office.removeCustomerByLastName("Sobczak");
+    }
 
 
 

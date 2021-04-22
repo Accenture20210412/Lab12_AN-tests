@@ -30,7 +30,15 @@ public class CustomerData implements CustomerRepository {
 
     @Override
     public boolean removeByLastName(String lastName) {
-        return customers.removeIf(c -> c.getLastName().startsWith(lastName));
+        int customerSize = customers.size();
+        for(Customer customer : customers) {
+            if(customer.getLastName().equals(lastName)) {
+                customers.remove(customer);
+                return true;
+            }
+        }
+        throw new IllegalArgumentException();
+
     }
 
     @Override
