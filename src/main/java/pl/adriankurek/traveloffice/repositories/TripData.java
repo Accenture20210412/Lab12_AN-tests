@@ -35,6 +35,8 @@ public class TripData implements TripRepository {
 
     @Override
     public List<Trip> getByDestination(String destination) {
+
+
         return trips.stream()
                 .filter(t -> t.getDestination()
                         .startsWith(destination))
